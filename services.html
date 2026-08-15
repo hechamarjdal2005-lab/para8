@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Para Errahali | Hijama Cupping Therapy Meknès</title>
+  <meta name="description" content="Medical cupping therapy (hijama) services at Para Errahali in Meknès. Book your appointment via WhatsApp.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M12 2v20M2 12h20"/>
+          </svg>
+        </span>
+        Para Errahali
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <span class="open-badge">
+          <span class="open-dot"></span>
+          OPEN 24/7
+        </span>
+        <button class="nav-cart-btn" onclick="toggleCart()" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <button class="nav-hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ CART SIDEBAR ═══════════ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">0.00 DH</span>
+      </div>
+      <button class="cart-order-btn btn-whatsapp" onclick="orderViaWhatsApp()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ═══════════ PAGE HEADER ═══════════ -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Services</span>
+      </div>
+      <h1>Our Services</h1>
+      <p>Professional healthcare services by certified specialists.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ HIJAMA SERVICE ═══════════ -->
+  <section class="hijama-hero">
+    <div class="container">
+      <div class="hijama-grid">
+        <div class="hijama-info reveal">
+          <span class="section-label">Specialized Service</span>
+          <h2>Medical Cupping Therapy (Hijama)</h2>
+          <p>
+            Hijama, or medical cupping therapy, is an ancient healing practice that has been
+            used for centuries across many cultures. At Para Errahali, our certified hijama
+            specialist performs this therapy in a clean, clinical environment using
+            sterilized equipment.
+          </p>
+          <p>
+            The therapy involves placing specialized cups on the skin to create suction,
+            which promotes blood flow, relieves muscle tension, and supports the body's
+            natural healing processes.
+          </p>
+
+          <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:700;margin:28px 0 16px;color:var(--gray-900);">Benefits of Hijama</h3>
+          <ul class="benefits-list">
+            <li>
+              <span class="benefit-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Pain Relief</strong> — Effective for back pain, neck pain, migraines, and joint discomfort
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Improved Blood Circulation</strong> — Enhances oxygen flow and nutrient delivery to tissues
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Detoxification</strong> — Helps remove toxins and waste from the body
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Stress &amp; Anxiety Relief</strong> — Promotes deep relaxation and mental well-being
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Skin Health</strong> — Can help with acne, eczema, and cellulite reduction
+              </div>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Immune System Support</strong> — Strengthens the body's natural defenses
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="appointment-card">
+            <h3>Book Your Appointment</h3>
+            <p>Schedule your hijama session with our certified specialist. We offer flexible time slots throughout the week.</p>
+
+            <div class="appointment-slots">
+              <div class="slot">
+                <span class="slot-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                Morning Sessions: 9:00 AM — 12:00 PM
+              </div>
+              <div class="slot">
+                <span class="slot-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                Afternoon Sessions: 2:00 PM — 6:00 PM
+              </div>
+              <div class="slot">
+                <span class="slot-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                Evening Sessions: 7:00 PM — 9:00 PM
+              </div>
+            </div>
+
+            <div class="appointment-note">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-500)" stroke-width="2" style="flex-shrink:0;margin-top:2px;">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+              <span>Each session lasts approximately 45-60 minutes. Please arrive 10 minutes early for preparation. Consultation included.</span>
+            </div>
+
+            <a href="https://wa.me/212716325533?text=Hello%2C%20I%20would%20like%20to%20book%20a%20hijama%20(cupping)%20session%20at%20Para%20Errahali.%20Please%20let%20me%20know%20available%20time%20slots." class="btn btn-whatsapp" style="width:100%;" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Book Appointment via WhatsApp
+            </a>
+          </div>
+
+          <div style="margin-top:24px;background:var(--green-50);border:1px solid var(--green-200);border-radius:16px;padding:24px;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="width:40px;height:40px;background:var(--green-100);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏥</div>
+              <div>
+                <h4 style="font-family:var(--font-heading);font-size:.9rem;font-weight:700;color:var(--gray-800);">Clinical Environment</h4>
+                <p style="font-size:.8rem;color:var(--gray-500);">Sterilized equipment, professional setting</p>
+              </div>
+            </div>
+            <p style="font-size:.85rem;color:var(--gray-600);line-height:1.6;">
+              All hijama sessions are performed in a clean, clinical environment by our
+              certified specialist using sterilized cups and equipment. Your safety and
+              comfort are our top priority.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ OTHER SERVICES ═══════════ -->
+  <section style="padding:var(--section-py) 0;background:var(--gray-50);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">More Services</span>
+        <h2 class="section-title">Additional Offerings</h2>
+        <p class="section-subtitle">Beyond hijama, we provide comprehensive pharmacy services.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon">💊</div>
+          <h3>Medication Counseling</h3>
+          <p>Expert advice on medications, drug interactions, and proper usage from our licensed pharmacists.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon">🩺</div>
+          <h3>Health Screenings</h3>
+          <p>Blood pressure monitoring, blood sugar checks, and basic health assessments available in-store.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon">🌱</div>
+          <h3>Natural Remedies Consultation</h3>
+          <p>Personalized guidance on natural products, herbal remedies, and holistic wellness approaches.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-4">
+          <div class="why-icon">👶</div>
+          <h3>Baby &amp; Maternity Care</h3>
+          <p>Specialized products and expert advice for mothers and babies, from pregnancy through childhood.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-400)" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+            Para Errahali
+          </h3>
+          <p>Your trusted 24/7 parapharmacy in Meknès. Expertise, care, and quality products — always available for you and your family.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/para_errahali" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/212716325533" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="shop.html">Skincare</a></li>
+            <li><a href="shop.html">Natural Cosmetics</a></li>
+            <li><a href="shop.html">Medical Products</a></li>
+            <li><a href="shop.html">Baby Care</a></li>
+            <li><a href="shop.html">Wellness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+212716325533">📞 07 16 32 55 33</a></li>
+            <li><a href="https://wa.me/212716325533" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+            <li><a href="https://instagram.com/para_errahali" target="_blank" rel="noopener">📷 @para_errahali</a></li>
+            <li><span style="color:var(--green-400);font-weight:600;">🟢 Open 24 Hours</span></li>
+            <li><span>Meknès, Morocco</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Para Errahali. All rights reserved.</span>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
